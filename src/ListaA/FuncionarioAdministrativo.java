@@ -1,12 +1,12 @@
 package ListaA;
 
-public class FuncionariosAdministrativos extends FuncionariosAssalariados {
+public class FuncionarioAdministrativo extends FuncionarioAssalariado {
     //Atributos
     private String funcaoAdministrativa;
     private String senioridade;
 
     //construtor
-    public FuncionariosAdministrativos(String nome, String cpf, String numeroDeRegistro, String orgaoDeLotacao, double salario, String funcaoAdministrativa, String senioridade) {
+    public FuncionarioAdministrativo(String nome, String cpf, String numeroDeRegistro, String orgaoDeLotacao, double salario, String funcaoAdministrativa, String senioridade) {
         super(nome, cpf, numeroDeRegistro, orgaoDeLotacao, salario);
         this.funcaoAdministrativa = funcaoAdministrativa;
         this.senioridade = senioridade;

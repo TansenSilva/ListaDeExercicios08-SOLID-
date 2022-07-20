@@ -7,23 +7,15 @@ public class Turma {
     private String nome;
     private int quantidadeDeAlunos;
 
-    private Set<Turma> turma = new HashSet<>();
-
 
     public Turma(String nome, int quantidadeDeAlunos) {
         this.nome = nome;
         this.quantidadeDeAlunos = quantidadeDeAlunos;
     }
 
-    public void adicionarTurma(Turma turma){
-        this.turma.add(turma);
-    }
-
-    public void exibirTurmas(Professores professor) {
-        System.out.println("Lista de Turmas:");
-        for(Turma t:turma){
-            System.out.println("Turma do professor: " + professor.getNome() + "\nNome da Turma: " + t.getNome());
-        }
+    public void exibirDadosTurma(){
+        System.out.println("Nome da turma: " + getNome());
+        System.out.println("Quantidade de alunos: " + getQuantidadeDeAlunos());
     }
 
     public String getNome() {

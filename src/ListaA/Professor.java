@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Professores extends FuncionariosAssalariados {
+public class Professor extends FuncionarioAssalariado {
 
     Scanner input = new Scanner(System.in);
     //Atributos
@@ -12,15 +12,47 @@ public class Professores extends FuncionariosAssalariados {
     private String disciplinaMinistrada;
     private int quantidadeDeAlunos;
     private int quantidadeDeTurmas;
-    private Set<Turma> turma = new HashSet<>();
+
+    private Set<Estagiario> estagiarios = new HashSet<>();
+    private Set<Turma> turmas = new HashSet<>();
 
     //Construtor
-    public Professores(String nome, String cpf, String numeroDeRegistro, String orgaoDeLotacao, double salario, String nivelDeGraduacao, String disciplinaMinistrada, int quantidadeDeAlunos, int quantidadeDeTurmas) {
+    public Professor(String nome, String cpf, String numeroDeRegistro, String orgaoDeLotacao, double salario, String nivelDeGraduacao, String disciplinaMinistrada, int quantidadeDeAlunos, int quantidadeDeTurmas) {
         super(nome, cpf, numeroDeRegistro, orgaoDeLotacao, salario);
         this.nivelDeGraduacao = nivelDeGraduacao;
         this.disciplinaMinistrada = disciplinaMinistrada;
         this.quantidadeDeAlunos = quantidadeDeAlunos;
         this.quantidadeDeTurmas = quantidadeDeTurmas;
+    }
+
+    public void adicionarEstagiario(Estagiario estagiario){
+        if (this.estagiarios.size()<2){
+            this.estagiarios.add(estagiario);
+        }else{
+            System.out.println("Quantidade máxima de estagiários atingida");
+        }
+    }
+
+    public void exibirEstagiarios(){
+        System.out.println("----Relação de Estagiários----");
+        System.out.println("Professor: " + getNome());
+        System.out.println("---Estagiários---");
+        for (Estagiario e : this.estagiarios){
+            e.exibirDadosEstagiario();
+        }
+    }
+
+    public void adicionarTurma(Turma turma){
+        this.turmas.add(turma);
+    }
+
+    public void exibirTurmas() {
+        System.out.println("Lista de Turmas:");
+        System.out.println("Turma do professor: " + getNome());
+        for(Turma t:this.turmas){
+
+            t.exibirDadosTurma();
+        }
     }
 
 

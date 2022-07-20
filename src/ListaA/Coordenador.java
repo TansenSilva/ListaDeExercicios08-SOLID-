@@ -3,17 +3,17 @@ package ListaA;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Coordenadores extends FuncionariosAssalariados{
+public class Coordenador extends FuncionarioAssalariado {
     //atributos
-    private Set<Professores> professoresSupervisionados = new HashSet<>();
+    private Set<Professor> professoresSupervisionados = new HashSet<>();
 
     //contrutor
-    public Coordenadores(String nome, String cpf, String numeroDeRegistro, String orgaoDeLotacao, double salario) {
+    public Coordenador(String nome, String cpf, String numeroDeRegistro, String orgaoDeLotacao, double salario) {
         super(nome, cpf, numeroDeRegistro, orgaoDeLotacao, salario);
     }
 
     //métodos
-    public void adicionarProfessor(Professores professor){
+    public void adicionarProfessor(Professor professor){
         if (this.professoresSupervisionados.size()<10){
             this.professoresSupervisionados.add(professor);
         }else{
@@ -27,17 +27,17 @@ public class Coordenadores extends FuncionariosAssalariados{
 
     public void professoresCoordenados() {
         System.out.println("Lista de Professores Coordenados:");
-        for(Professores p:professoresSupervisionados){
+        for(Professor p:professoresSupervisionados){
             System.out.println("Nome do professor supervisionado: " + p.getNome());
         }
     }
 
     //Getter e Setter
-    public Set<Professores> getProfessoresSupervisionados() {
+    public Set<Professor> getProfessoresSupervisionados() {
         return professoresSupervisionados;
     }
 
-    public void setProfessoresSupervisionados(Set<Professores> professoresSupervisionados) {
+    public void setProfessoresSupervisionados(Set<Professor> professoresSupervisionados) {
         this.professoresSupervisionados = professoresSupervisionados;
     }
 }

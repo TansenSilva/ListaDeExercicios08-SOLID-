@@ -1,11 +1,11 @@
 package ListaA;
 
-public class FuncionariosAssalariados extends Funcionarios{
+public class FuncionarioAssalariado extends Funcionario {
 
     private double salario;
 
 
-    public FuncionariosAssalariados(String nome, String cpf, String numeroDeRegistro, String orgaoDeLotacao, double salario) {
+    public FuncionarioAssalariado(String nome, String cpf, String numeroDeRegistro, String orgaoDeLotacao, double salario) {
         super(nome, cpf, numeroDeRegistro, orgaoDeLotacao);
         this.salario = salario;
     }

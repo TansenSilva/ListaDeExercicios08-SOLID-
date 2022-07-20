@@ -4,17 +4,17 @@ import java.util.Scanner;
 
 public class Financeiro {
 
-    public double aumentoSalarioFaixa2(FuncionariosAssalariados funcionario) {
+    public double aumentoSalarioFaixa2(FuncionarioAssalariado funcionario) {
         funcionario.setSalario(funcionario.getSalario()+(funcionario.getSalario()*0.1));
         return funcionario.getSalario();
     }
 
-    public double aumentoSalarioFaixa1(FuncionariosAssalariados funcionario) {
+    public double aumentoSalarioFaixa1(FuncionarioAssalariado funcionario) {
         funcionario.setSalario(funcionario.getSalario() + (funcionario.getSalario() * 0.05));
         return funcionario.getSalario();
     }
 
-        protected void reembolsoDespesas(Funcionarios funcionario) {
+        protected void reembolsoDespesas(Funcionario funcionario) {
             Scanner input = new Scanner(System.in);
             System.out.println();
             System.out.println("----Solicitação de Reembolso----");

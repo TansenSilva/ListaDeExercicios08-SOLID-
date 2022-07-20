@@ -1,6 +1,6 @@
 package ListaA;
 
-public abstract class Funcionarios {
+public abstract class Funcionario {
 
     //Atributos
     private String nome;
@@ -9,7 +9,7 @@ public abstract class Funcionarios {
     private String orgaoDeLotacao;
 
     //Construtor
-    public Funcionarios(String nome, String cpf, String numeroDeRegistro, String orgaoDeLotacao) {
+    public Funcionario(String nome, String cpf, String numeroDeRegistro, String orgaoDeLotacao) {
         this.nome = nome;
         this.cpf = cpf;
         this.numeroDeRegistro = numeroDeRegistro;
