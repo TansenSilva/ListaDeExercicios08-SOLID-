@@ -62,6 +62,7 @@ public class Main {
             //tentar adicionar mais um estagiário
             professor1.adicionarEstagiario(estagiario3);
 
+            //solicitações de reembolso
             financeiro.reembolsoDespesas(professor1);
             financeiro.reembolsoDespesas(estagiario1);
             financeiro.reembolsoDespesas(cordenador1);
