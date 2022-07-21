@@ -6,6 +6,8 @@ public class Main {
         {
             Financeiro financeiro = new Financeiro();
             Turma turma1 = new Turma("Turma 1", 40);
+            TabelaSalario tabela1 = new TabelaSalarioFaixa1();
+            TabelaSalario tabela2 = new TabelaSalarioFaixa2();
 
             FuncionarioAdministrativo funcionario1 = new FuncionarioAdministrativo("Elivar", "123.123.232-33", "00023", "Secretaria de Educação", 2300, "Contador", "Júnior");
 
@@ -42,17 +44,17 @@ public class Main {
             //salario do professor antes do  reajuste
             System.out.println("Salário professor sem reajuste: " + professor1.getSalario());
             //salario do professor reajustado
-            System.out.println("Salário professor reajustado: " + financeiro.aumentoSalarioFaixa2(professor1));
+            System.out.println("Salário professor reajustado: " + financeiro.aumentoSalario(professor1,tabela1));
             System.out.println();
             //salario do Coordenador antes do  reajuste
             System.out.println("Salário coordenador sem reajuste: " + cordenador1.getSalario());
             //salario do Cordenador reajustado
-            System.out.println("Salário coordenador reajustado: " + financeiro.aumentoSalarioFaixa1(cordenador1));
+            System.out.println("Salário coordenador reajustado: " + financeiro.aumentoSalario(cordenador1,tabela2));
             System.out.println();
             //salafio Funcionário Administrativo antes do reajuste
             System.out.println("Salário Funcionário Administrativo sem reajuste: " + funcionario1.getSalario());
             //salario do Funcionário Administrativo reajustado
-            System.out.println("Salário Funcionário Administrativo reajustado: " + financeiro.aumentoSalarioFaixa2(funcionario1));
+            System.out.println("Salário Funcionário Administrativo reajustado: " + financeiro.aumentoSalario(funcionario1,tabela1));
             System.out.println();
             //adicionar estágiarios ao professor
             professor1.adicionarEstagiario(estagiario1);
@@ -66,10 +68,6 @@ public class Main {
             financeiro.reembolsoDespesas(professor1);
             financeiro.reembolsoDespesas(estagiario1);
             financeiro.reembolsoDespesas(cordenador1);
-
-
-
-
 
         }
     }
